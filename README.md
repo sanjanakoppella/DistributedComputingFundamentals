@@ -32,5 +32,10 @@ Also, change docker_script.sh to inlude the exact commands used by your team.
 
 Hey !! This is Team 6
 Team Members: Dheeraj,Aravind,Mansimran,Sanjana
+websites used as references: 
+https://guides.github.com/activities/hello-world/
+https://ropenscilabs.github.io/r-docker-tutorial/04-Dockerhub.html
 
+link to dockerhub Repository:
+https://cloud.docker.com/repository/docker/sanjanakoppella/pesuio_2019
 
