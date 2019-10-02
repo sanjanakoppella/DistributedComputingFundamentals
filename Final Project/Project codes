@@ -1,1 +1,94 @@
+HI THIS IS GROUP 6 AND THESE ARE THE COMMANDS WE HAVE USED IN OUR FINAL PROJECT
+
+#To Start the cluster
+minikube start
+
+#To Check the status of Minikube
+minikube status
+
+#To check if kubectl is installed
+kubectl version
+
+#To view the cluster details
+kubectl cluster-info
+
+#To view the nodes in the cluster
+kubectl get nodes
+
+#create a deployment
+kubectl create groupsix
+
+#To Create a Service
+kubectl expose groupsix
+
+#To run an app on Kubernetes 
+kubectl run kubernetes-groupsix --image=gcr.io/google-samples/kubernetes-groupsix:v1 --port=8080
+
+#To list  deployments 
+kubectl get groupsix
+
+#To make the hello-node Container accessible from outside the Kubernetes virtual network
+minikube service hello-node
+
+#To get the Pod name, and store in the environment variable Group_Six:
+export Group_Six=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
+echo Name of the Pod: groupsix
+
+#To look for existing Pods
+kubectl get pods
+
+#To view what containers are inside that Pod and what images are used to build those containers 
+kubectl describe pods
+
+#To retrieve logs 
+kubectl logs Group_Six
+
+#To run the commands on the pod
+kubectl exec Group_Six env
+
+#To start a bash session in the Pod’s container
+kubectl exec -ti Group_six bash
+
+#For sealing a deployment
+kubectl scale deployment hello --replicas=<no.of.replicas>
+
+#To see the replica set
+kubectl get replicaset
+
+#To view the new entry
+kubectl rollout history deployment/hello
+
+#To close container connection  
+exit
+
+#To list the current Services from the cluster:
+kubectl get services
+
+#To create a new serviceand expose it to external traffic
+kubectl expose deployment/kubernetes-groupsix --type="NodePort" --port 8080
+
+#To find out what port was opened externally (by the NodePort option)
+kubectl describe services/kubernetes-groupsix
+
+#To see the name of the deployment:
+kubectl describe groupsix
+
+#To query our list of Pods
+kubectl get pods -l run=kubernetes-groupsix
+
+#to list the existing services
+kubectl get services -l run=kubernetes-groupsix
+
+#To delete Services 
+kubectl delete service -l run=kubernetes-groupsix
+
+#To scale the Deployment to 2 replicas
+kubectl scale deployments/kubernetes-groupsix --replicas=2
+
+#To confirm an update
+kubectl rollout status deployments/kubernetes-groupsix
+
+#to undo and rollout of a version of deployment
+kubectl rollout undo deployments/kubernetes-groupsix
+
 
