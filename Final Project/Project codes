@@ -91,4 +91,5 @@ kubectl rollout status deployments/kubernetes-groupsix
 #to undo and rollout of a version of deployment
 kubectl rollout undo deployments/kubernetes-groupsix
 
-
+#To access the Kubernetes Dashboard
+minikube dashboard
