@@ -82,8 +82,8 @@ kubectl get services -l run=kubernetes-groupsix
 #To delete Services 
 kubectl delete service -l run=kubernetes-groupsix
 
-#To scale the Deployment to 2 replicas
-kubectl scale deployments/kubernetes-groupsix --replicas=2
+#To scale the Deployment to 4 replicas
+kubectl scale deployments/kubernetes-groupsix --replicas=4
 
 #To confirm an update
 kubectl rollout status deployments/kubernetes-groupsix
